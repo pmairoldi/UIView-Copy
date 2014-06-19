@@ -36,6 +36,14 @@
     
     [self copyProperitesFrom:self to:copiedView];
     
+    for (UIView *subview in self.subviews) {
+        
+        UIView *copiedSubview = [self copyObject:subview];
+        [self copyProperitesFrom:subview to:copiedSubview];
+        
+        [copiedView addSubview:copiedSubview];
+    }
+    
     return copiedView;
 }
 
