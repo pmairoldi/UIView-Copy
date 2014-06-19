@@ -36,13 +36,7 @@
     
     [self copyProperitesFrom:self to:copiedView];
     
-    for (UIView *subview in self.subviews) {
-        
-        UIView *copiedSubview = [self copyObject:subview];
-        [self copyProperitesFrom:subview to:copiedSubview];
-        
-        [copiedView addSubview:copiedSubview];
-    }
+    [self handleSubviewsFrom:self to:copiedView];
     
     return copiedView;
 }
@@ -67,7 +61,22 @@
     }
 }
 
--(void)copyProperitesFrom:(id)original to:(id)copy {
+-(void)handleSubviewsFrom:(UIView *)original to:(UIView *)copy {
+    
+    for (UIView *subview in original.subviews) {
+        
+        UIView *copiedSubview = [self copyObject:subview];
+        [self copyProperitesFrom:subview to:copiedSubview];
+        
+        [copy addSubview:copiedSubview];
+        
+        if (subview.subviews.count > 0) {
+            [self handleSubviewsFrom:subview to:copiedSubview];
+        }
+    }
+}
+
+-(void)copyProperitesFrom:(UIView *)original to:(UIView *)copy {
     
     unsigned int outCount, i;
     
