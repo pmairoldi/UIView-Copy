@@ -6,9 +6,9 @@
 #
 Pod::Spec.new do |s|
   s.name             = "UIView+Copy"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "Adding a copy method to UIView."
-  s.homepage         = "http://pierremarcairoldi.com"
+  s.homepage         = "https://github.com/petester42/UIView-Copy"
   #s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Pierre-Marc Airoldi" => "pierremarcairoldi@gmail.com" }
