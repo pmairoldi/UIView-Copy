@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 
 #define HIGHLIGHT_PROPERTY @"highlighted"
+#define LAYER_PROPERTY @"layer"
 
 @implementation UIView (Copy)
 
@@ -26,16 +27,23 @@
     
     [self fixHighlighted:self];
     
-    NSData *tempArchivedView = [NSKeyedArchiver archivedDataWithRootObject:self];
-    
-    UIView *copiedView = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchivedView];
+    UIView *copiedView = [self copyObject:self];
     
     if (class_getProperty([self class], [HIGHLIGHT_PROPERTY UTF8String]) != NULL) {
         
         [copiedView setValue:@(isHighlighted) forKey:HIGHLIGHT_PROPERTY];
     }
     
+    [self copyProperitesFrom:self to:copiedView];
+    
     return copiedView;
+}
+
+-(id)copyObject:(id)object {
+    
+    NSData *tempArchivedView = [NSKeyedArchiver archivedDataWithRootObject:object];
+    
+    return [NSKeyedUnarchiver unarchiveObjectWithData:tempArchivedView];
 }
 
 -(void)fixHighlighted:(UIView *)view {
@@ -49,6 +57,41 @@
         
         [self fixHighlighted:subview];
     }
+}
+
+-(void)copyProperitesFrom:(id)original to:(id)copy {
+    
+    unsigned int outCount, i;
+    
+    objc_property_t *properties = class_copyPropertyList([copy class], &outCount);
+    
+    for (i = 0; i < outCount; i++) {
+    	
+        objc_property_t property = properties[i];
+        NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+        
+        id objectCopy;
+        
+        if ([[original valueForKey:propertyName] conformsToProtocol:@protocol(NSCopying)]) {
+            objectCopy = [[original valueForKey:propertyName] copy];
+        }
+        
+        else {
+            objectCopy = [self copyObject:[original valueForKey:propertyName]];
+        }
+        
+        @try {
+            [copy setValue:objectCopy forKey:propertyName];
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    }
+    
+    free(properties);
 }
 
 @end

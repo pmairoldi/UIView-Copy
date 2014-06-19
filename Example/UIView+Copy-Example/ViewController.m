@@ -27,6 +27,8 @@
    
     UIView *originalView = [[UIView alloc] initWithFrame:top];
     originalView.backgroundColor = [UIColor redColor];
+    originalView.layer.borderColor = [UIColor blackColor].CGColor;
+    originalView.layer.borderWidth = 2.0;
     
     /**** implementation ****/
     UIView *copiedView = [originalView pm_copy];
