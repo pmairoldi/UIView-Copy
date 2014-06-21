@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-pierremarcairoldi, pierre-marc@mobila-canada.com
+pierremarcairoldi, pierremarcairoldi@gmail.com
 
 ## License
 
