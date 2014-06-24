@@ -1,9 +1,7 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '7.0'
 
-target "UIView+Copy-Example" do
-  pod "UIView+Copy", :path => "../"
-end
+pod "UIView+Copy", :path => "../"
 
 # Uncomment the following lines to add testing dependencies
 # target "DemoTests" do

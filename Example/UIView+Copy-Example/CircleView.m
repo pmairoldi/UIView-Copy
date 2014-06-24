@@ -30,8 +30,6 @@
         mask.path = [UIBezierPath bezierPathWithOvalInRect:frame].CGPath;
         
         self.layer.mask = mask;
-        self.layer.borderWidth = 1.0;
-        self.layer.borderColor = [UIColor blackColor].CGColor;
         self.layer.contentsScale = [UIScreen mainScreen].scale;
         
         _imageView = [[UIImageView alloc] initWithFrame:frame];

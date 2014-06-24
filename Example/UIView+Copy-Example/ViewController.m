@@ -34,7 +34,13 @@
     [self.view addSubview:originalView];
     
     /**** implementation ****/
+    
+#ifdef NEEDS_DRAW_RECT
     CustomView *copiedView = (CustomView *)[originalView pm_copy];
+#else
+    CustomView *copiedView = (CustomView *)[originalView pm_copyWithNeedsDrawRect:NO];
+#endif
+    
     /**** implementation ****/
 
     [self.view addSubview:copiedView];
