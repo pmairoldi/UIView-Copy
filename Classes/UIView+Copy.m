@@ -1,4 +1,4 @@
-//
+
 //  UIView+UIView_Copy.m
 //  Pods
 //
@@ -16,27 +16,23 @@
 
 -(UIView *)pm_copy {
     
-    BOOL isHighlighted = false;
-    
-    if (class_getProperty([self class], [HIGHLIGHT_PROPERTY UTF8String]) != NULL) {
-        
-        if ([[self valueForKey:HIGHLIGHT_PROPERTY] isEqual: @(1)]) {
-            isHighlighted = true;
-        }
-    }
-    
-    [self fixHighlighted:self];
-    
-    UIView *copiedView = [self copyObject:self];
-    
-    if (class_getProperty([self class], [HIGHLIGHT_PROPERTY UTF8String]) != NULL) {
-        
-        [copiedView setValue:@(isHighlighted) forKey:HIGHLIGHT_PROPERTY];
-    }
-    
-    [self copyProperitesFrom:self to:copiedView];
+    UIView *copiedView = [self copyView:self];
     
     [self handleSubviewsFrom:self to:copiedView];
+    
+    return copiedView;
+}
+
+-(UIView *)copyView:(UIView *)view {
+    
+    [self fixHighlighted:view];
+    
+    UIView *copiedView = [self copyObject:view];
+    
+    [self setLayerPropertiesFrom:view.layer to:copiedView.layer];
+
+    [self setHighlighted:[self getHighlighted:view] forView:copiedView];
+    [self copyPropertiesFrom:view to:copiedView];
     
     return copiedView;
 }
@@ -54,10 +50,27 @@
         
         [view setValue:@(0) forKey:HIGHLIGHT_PROPERTY];
     }
+}
+
+-(BOOL)getHighlighted:(UIView *)view {
     
-    for (UIView *subview in view.subviews) {
+    BOOL isHighlighted = false;
+    
+    if (class_getProperty([view class], [HIGHLIGHT_PROPERTY UTF8String]) != NULL) {
         
-        [self fixHighlighted:subview];
+        if ([[view valueForKey:HIGHLIGHT_PROPERTY] isEqual: @(1)]) {
+            isHighlighted = true;
+        }
+    }
+    
+    return isHighlighted;
+}
+
+-(void)setHighlighted:(BOOL)isHighlighted forView:(UIView *)view{
+    
+    if (class_getProperty([view class], [HIGHLIGHT_PROPERTY UTF8String]) != NULL) {
+        
+        [view setValue:@(isHighlighted) forKey:HIGHLIGHT_PROPERTY];
     }
 }
 
@@ -65,18 +78,67 @@
     
     for (UIView *subview in original.subviews) {
         
-        UIView *copiedSubview = [self copyObject:subview];
-        [self copyProperitesFrom:subview to:copiedSubview];
-        
-        [copy addSubview:copiedSubview];
+        UIView *copiedView = [self copyView:subview];
         
         if (subview.subviews.count > 0) {
-            [self handleSubviewsFrom:subview to:copiedSubview];
+            [self handleSubviewsFrom:subview to:copiedView];
         }
     }
 }
 
--(void)copyProperitesFrom:(UIView *)original to:(UIView *)copy {
+-(void)setLayerPropertiesFrom:(CALayer *)original to:(CALayer *)copy {
+
+    copy.bounds = original.bounds;
+    copy.position = original.position;
+    copy.zPosition = original.zPosition;
+    copy.anchorPoint = original.anchorPoint;
+    copy.transform = original.transform;
+    copy.frame = original.frame;
+    copy.hidden = original.hidden;
+    copy.doubleSided = original.doubleSided;
+    copy.geometryFlipped = original.geometryFlipped;
+//    copy.superlayer = original.superlayer;
+//    copy.sublayers = [original.sublayers copy];
+    copy.sublayerTransform = original.sublayerTransform;
+    copy.mask = [self copyObject:original.mask]; // needs to copy
+    copy.masksToBounds = original.masksToBounds;
+    copy.contents = original.contents;
+    copy.contentsRect = original.contentsRect;
+    copy.contentsGravity = [original.contentsGravity copy];
+    copy.contentsScale = original.contentsScale;
+    copy.contentsCenter = original.contentsCenter;
+    copy.minificationFilter = [original.minificationFilter copy];
+    copy.magnificationFilter = [original.magnificationFilter copy];
+    copy.minificationFilterBias = original.minificationFilterBias;
+    copy.opaque = copy.opaque;
+    copy.needsDisplayOnBoundsChange = original.needsDisplayOnBoundsChange;
+    copy.drawsAsynchronously = original.drawsAsynchronously;
+    copy.edgeAntialiasingMask = original.edgeAntialiasingMask;
+    copy.allowsEdgeAntialiasing = original.allowsEdgeAntialiasing;
+    copy.backgroundColor = original.backgroundColor;
+    copy.cornerRadius = original.cornerRadius;
+    copy.borderWidth = original.borderWidth;
+    copy.borderColor = original.borderColor;
+    copy.opacity = original.opacity;
+    copy.allowsGroupOpacity = original.allowsGroupOpacity;
+    copy.compositingFilter = original.compositingFilter;
+    copy.filters = [original.filters copy];
+    copy.backgroundFilters = [original.backgroundFilters copy];
+    copy.shouldRasterize = original.shouldRasterize;
+    copy.rasterizationScale = original.rasterizationScale;
+    copy.shadowColor = original.shadowColor;
+    copy.shadowOpacity = original.shadowOpacity;
+    copy.shadowOffset = original.shadowOffset;
+    copy.shadowRadius = original.shadowRadius;
+    copy.shadowPath = original.shadowPath;
+    copy.actions = [original.actions copy];
+    copy.name = [original.name copy];
+    copy.delegate = original.delegate;
+    copy.style = [original.style copy];
+
+}
+
+-(void)copyPropertiesFrom:(id)original to:(id)copy {
     
     unsigned int outCount, i;
     
@@ -87,21 +149,37 @@
         objc_property_t property = properties[i];
         NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
         
-        id objectCopy;
-        
-        if ([[original valueForKey:propertyName] conformsToProtocol:@protocol(NSCopying)]) {
-            objectCopy = [[original valueForKey:propertyName] copy];
-        }
-        
-        else {
-            objectCopy = [self copyObject:[original valueForKey:propertyName]];
-        }
-        
+        id objectCopy = nil;
+
         @try {
-            [copy setValue:objectCopy forKey:propertyName];
+            
+            id objectProperty = [original valueForKey:propertyName];
+            
+            if ([objectProperty conformsToProtocol:@protocol(NSCopying)]) {
+                objectCopy = [[original valueForKey:propertyName] copy];
+            }
+            
+            else {
+                objectCopy = [self copyObject:objectProperty];
+            }
         }
         @catch (NSException *exception) {
             
+            NSLog(@"%@", [exception description]);
+        }
+        @finally {
+            
+        }
+
+        @try {
+            
+            if (objectCopy != nil) {
+                [copy setValue:objectCopy forKey:propertyName];
+            }
+        }
+        @catch (NSException *exception) {
+            
+            NSLog(@"%@", [exception description]);
         }
         @finally {
             

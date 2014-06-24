@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CustomView.h"
 #import <UIView+Copy/UIView+Copy.h>
 
 @interface ViewController ()
+
 
 @end
 
@@ -20,43 +22,47 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.view.backgroundColor = [UIColor whiteColor];
+
     CGRect top;
     CGRect bottom;
     
     [self getRects:&top bottomRect:&bottom];
    
-    UIView *originalView = [[UIView alloc] initWithFrame:top];
-    originalView.backgroundColor = [UIColor redColor];
-    originalView.layer.borderColor = [UIColor blackColor].CGColor;
-    originalView.layer.borderWidth = 2.0;
+    CustomView *originalView = [[CustomView alloc] initWithFrame:top];
+
+    [self.view addSubview:originalView];
     
     /**** implementation ****/
-    UIView *copiedView = [originalView pm_copy];
+    CustomView *copiedView = (CustomView *)[originalView pm_copy];
     /**** implementation ****/
 
-    copiedView.frame = CGRectMake(CGRectGetMinX(bottom), CGRectGetMinY(bottom), CGRectGetWidth(copiedView.frame), CGRectGetHeight(copiedView.frame));
-    
-    UILabel *originalLabel = [[UILabel alloc] initWithFrame:top];
-    originalLabel.textAlignment = NSTextAlignmentCenter;
-    originalLabel.backgroundColor = [UIColor clearColor];
-    originalLabel.text = @"Original";
-    
-    UILabel *copyLabel = [[UILabel alloc] initWithFrame:bottom];
-    copyLabel.textAlignment = NSTextAlignmentCenter;
-    copyLabel.backgroundColor = [UIColor clearColor];
-    copyLabel.text = @"Copy";
-    
-    [self.view addSubview:originalView];
     [self.view addSubview:copiedView];
     
-    [self.view addSubview:originalLabel];
-    [self.view addSubview:copyLabel];
+    copiedView.frame = CGRectMake(CGRectGetMinX(bottom), CGRectGetMinY(bottom), CGRectGetWidth(copiedView.frame), CGRectGetHeight(copiedView.frame));
+    
+    [self addText:@"Original" toView:originalView];
+    [self addText:@"Copy" toView:copiedView];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)addText:(NSString *)text toView:(UIView *)view {
+    
+    CGRect frame = view.frame;
+    frame.origin = CGPointZero;
+    
+    UILabel *originalLabel = [[UILabel alloc] initWithFrame:frame];
+    originalLabel.textAlignment = NSTextAlignmentCenter;
+    originalLabel.backgroundColor = [UIColor clearColor];
+    originalLabel.text = text;
+    
+    [view addSubview:originalLabel];
 }
 
 -(void)getRects:(CGRect *)top bottomRect:(CGRect *)bottom {
