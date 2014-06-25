@@ -1,4 +1,3 @@
-
 //  UIView+UIView_Copy.m
 //  Pods
 //
@@ -35,7 +34,7 @@
 
 +(UIView *)copyView:(UIView *)view needsDrawRect:(BOOL)needsDrawRect {
     
-    [self fixHighlighted:view];
+    [[self class] fixHighlighted:view];
     
     UIView *copiedView = [self copyObject:view];
     
@@ -66,6 +65,11 @@
     if (class_getProperty([view class], [HIGHLIGHT_PROPERTY UTF8String]) != NULL) {
         
         [view setValue:@(0) forKey:HIGHLIGHT_PROPERTY];
+    }
+    
+    for (UIView *subView in view.subviews) {
+        
+        [[self class] fixHighlighted:subView];
     }
 }
 
@@ -123,7 +127,7 @@
     NSArray *exludeProperties = [self exludeLayerProperties];
     NSArray *copyProperties = [self copyLayerProperties];
     NSArray *layerProperties = [self layerProperties];
-
+    
     unsigned int outCount, i;
     
     objc_property_t *properties = class_copyPropertyList([copy class], &outCount);
@@ -155,7 +159,7 @@
             
             [copy setValue:value forKey:propertyName];
         }
-
+        
         else {
             
             id value = [original valueForKey:propertyName];
