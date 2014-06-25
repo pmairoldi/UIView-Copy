@@ -3,14 +3,6 @@
 
 pod "UIView+Copy", :path => "../"
 
-#target "UIView+Copy (NeedsDrawRect)" do
-
-#end
-
-#target "UIView+Copy" do
-
-#end
-
 #target "UIView+Copy-ExampleTests" do
 
 #end

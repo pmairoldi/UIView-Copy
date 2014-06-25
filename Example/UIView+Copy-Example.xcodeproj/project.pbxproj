@@ -52,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		06B3005F195A49A10020C8B9 /* UIView+Copy (NeedsDrawRect) copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy (NeedsDrawRect) copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		06B30060195A49A20020C8B9 /* UIView+Copy (NeedsDrawRect) copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UIView+Copy (NeedsDrawRect) copy-Info.plist"; path = "/Users/pierremarcairoldi/Developer/iOS/Pods/UIView-Copy/Example/UIView+Copy (NeedsDrawRect) copy-Info.plist"; sourceTree = "<absolute>"; };
 		06F9BC15195A019C00CF703B /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		06F9BC16195A019C00CF703B /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		06F9BC18195A01A700CF703B /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
@@ -148,7 +147,6 @@
 				2B9D8EED195314EC00CDE614 /* Frameworks */,
 				2B9D8EEC195314EC00CDE614 /* Products */,
 				0DE3700C822E48339FABB74B /* Pods.xcconfig */,
-				06B30060195A49A20020C8B9 /* UIView+Copy (NeedsDrawRect) copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -480,7 +478,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "UIView+Copy (NeedsDrawRect) copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/UIView+Copy-Example/UIView+Copy-Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "UIView+Copy (NeedsDrawRect) copy";
 				WRAPPER_EXTENSION = app;
@@ -496,7 +494,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "UIView+Copy (NeedsDrawRect) copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/UIView+Copy-Example/UIView+Copy-Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "UIView+Copy (NeedsDrawRect) copy";
 				WRAPPER_EXTENSION = app;

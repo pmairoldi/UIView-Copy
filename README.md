@@ -9,9 +9,16 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 	#import <UIView+Copy/UIView+Copy.h>
+
+	//If you need drawRect: drawing
 	UIView *copiedView = [originalView pm_copy];
 
+	//if you need mask layer property
+    UIView *copiedViewWithDrawRect = (UIView *)[originalView pm_copyWithNeedsDrawRect:YES];
+
 ## Requirements
+	
+	iOS 6.0+ and ARC. 
 
 ## Installation
 
