@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0668B974195A44D2006D2097 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8F07195314ED00CDE614 /* ViewController.m */; };
-		0668B975195A44D2006D2097 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC19195A01A700CF703B /* CircleView.m */; };
-		0668B976195A44D2006D2097 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC16195A019C00CF703B /* CustomView.m */; };
-		0668B977195A44D2006D2097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8EFE195314EC00CDE614 /* AppDelegate.m */; };
-		0668B978195A44D2006D2097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8EFA195314EC00CDE614 /* main.m */; };
-		0668B979195A44D2006D2097 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC1C195A01B200CF703B /* ProgressView.m */; };
-		0668B97B195A44D2006D2097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF0195314EC00CDE614 /* CoreGraphics.framework */; };
-		0668B97C195A44D2006D2097 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF2195314EC00CDE614 /* UIKit.framework */; };
-		0668B97D195A44D2006D2097 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EEE195314EC00CDE614 /* Foundation.framework */; };
-		0668B97E195A44D2006D2097 /* libPods-UIView+Copy-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10288E4082A843BDB25D9292 /* libPods-UIView+Copy-Example.a */; };
-		0668B980195A44D2006D2097 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8F09195314ED00CDE614 /* Images.xcassets */; };
-		0668B981195A44D2006D2097 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8EF7195314EC00CDE614 /* InfoPlist.strings */; };
-		0668B982195A44D2006D2097 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F9BC1E195A090D00CF703B /* image.jpg */; };
+		06B3004C195A49A10020C8B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8F07195314ED00CDE614 /* ViewController.m */; };
+		06B3004D195A49A10020C8B9 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC19195A01A700CF703B /* CircleView.m */; };
+		06B3004E195A49A10020C8B9 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC16195A019C00CF703B /* CustomView.m */; };
+		06B3004F195A49A10020C8B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8EFE195314EC00CDE614 /* AppDelegate.m */; };
+		06B30050195A49A10020C8B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8EFA195314EC00CDE614 /* main.m */; };
+		06B30051195A49A10020C8B9 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC1C195A01B200CF703B /* ProgressView.m */; };
+		06B30053195A49A10020C8B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF0195314EC00CDE614 /* CoreGraphics.framework */; };
+		06B30054195A49A10020C8B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF2195314EC00CDE614 /* UIKit.framework */; };
+		06B30055195A49A10020C8B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EEE195314EC00CDE614 /* Foundation.framework */; };
+		06B30056195A49A10020C8B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D14B6C04A2F54761BB1A702F /* libPods.a */; };
+		06B30058195A49A10020C8B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8F09195314ED00CDE614 /* Images.xcassets */; };
+		06B30059195A49A10020C8B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8EF7195314EC00CDE614 /* InfoPlist.strings */; };
+		06B3005A195A49A10020C8B9 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F9BC1E195A090D00CF703B /* image.jpg */; };
 		06F9BC17195A019C00CF703B /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC16195A019C00CF703B /* CustomView.m */; };
 		06F9BC1A195A01A700CF703B /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC19195A01A700CF703B /* CircleView.m */; };
 		06F9BC1D195A01B200CF703B /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC1C195A01B200CF703B /* ProgressView.m */; };
@@ -37,7 +37,7 @@
 		2B9D8F13195314ED00CDE614 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF2195314EC00CDE614 /* UIKit.framework */; };
 		2B9D8F1B195314ED00CDE614 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8F19195314ED00CDE614 /* InfoPlist.strings */; };
 		2B9D8F1D195314ED00CDE614 /* UIView_Copy_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8F1C195314ED00CDE614 /* UIView_Copy_ExampleTests.m */; };
-		CE6609B846954C8A825E1154 /* libPods-UIView+Copy-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10288E4082A843BDB25D9292 /* libPods-UIView+Copy-Example.a */; };
+		AA2291306F834718B07F0F78 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D14B6C04A2F54761BB1A702F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0668B987195A44D2006D2097 /* UIView+Copy (NeedsDrawRect) copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy (NeedsDrawRect) copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B3005F195A49A10020C8B9 /* UIView+Copy (NeedsDrawRect) copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy (NeedsDrawRect) copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B30060195A49A20020C8B9 /* UIView+Copy (NeedsDrawRect) copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UIView+Copy (NeedsDrawRect) copy-Info.plist"; path = "/Users/pierremarcairoldi/Developer/iOS/Pods/UIView-Copy/Example/UIView+Copy (NeedsDrawRect) copy-Info.plist"; sourceTree = "<absolute>"; };
 		06F9BC15195A019C00CF703B /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		06F9BC16195A019C00CF703B /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		06F9BC18195A01A700CF703B /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
@@ -59,8 +60,9 @@
 		06F9BC1B195A01B200CF703B /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		06F9BC1C195A01B200CF703B /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		06F9BC1E195A090D00CF703B /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		0DE3700C822E48339FABB74B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		10288E4082A843BDB25D9292 /* libPods-UIView+Copy-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIView+Copy-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B9D8EEB195314EC00CDE614 /* UIView+Copy-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9D8EEB195314EC00CDE614 /* UIView+Copy (NeedsDrawRect).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy (NeedsDrawRect).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9D8EEE195314EC00CDE614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B9D8EF0195314EC00CDE614 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2B9D8EF2195314EC00CDE614 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -78,18 +80,18 @@
 		2B9D8F18195314ED00CDE614 /* UIView+Copy-ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIView+Copy-ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		2B9D8F1A195314ED00CDE614 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B9D8F1C195314ED00CDE614 /* UIView_Copy_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIView_Copy_ExampleTests.m; sourceTree = "<group>"; };
-		B6B9954D7D1C477EB9A5B259 /* Pods-UIView+Copy-Example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIView+Copy-Example.xcconfig"; path = "Pods/Pods-UIView+Copy-Example.xcconfig"; sourceTree = "<group>"; };
+		D14B6C04A2F54761BB1A702F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0668B97A195A44D2006D2097 /* Frameworks */ = {
+		06B30052195A49A10020C8B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0668B97B195A44D2006D2097 /* CoreGraphics.framework in Frameworks */,
-				0668B97C195A44D2006D2097 /* UIKit.framework in Frameworks */,
-				0668B97D195A44D2006D2097 /* Foundation.framework in Frameworks */,
-				0668B97E195A44D2006D2097 /* libPods-UIView+Copy-Example.a in Frameworks */,
+				06B30053195A49A10020C8B9 /* CoreGraphics.framework in Frameworks */,
+				06B30054195A49A10020C8B9 /* UIKit.framework in Frameworks */,
+				06B30055195A49A10020C8B9 /* Foundation.framework in Frameworks */,
+				06B30056195A49A10020C8B9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +102,7 @@
 				2B9D8EF1195314EC00CDE614 /* CoreGraphics.framework in Frameworks */,
 				2B9D8EF3195314EC00CDE614 /* UIKit.framework in Frameworks */,
 				2B9D8EEF195314EC00CDE614 /* Foundation.framework in Frameworks */,
-				CE6609B846954C8A825E1154 /* libPods-UIView+Copy-Example.a in Frameworks */,
+				AA2291306F834718B07F0F78 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,16 +147,17 @@
 				2B9D8F16195314ED00CDE614 /* UIView+Copy-ExampleTests */,
 				2B9D8EED195314EC00CDE614 /* Frameworks */,
 				2B9D8EEC195314EC00CDE614 /* Products */,
-				B6B9954D7D1C477EB9A5B259 /* Pods-UIView+Copy-Example.xcconfig */,
+				0DE3700C822E48339FABB74B /* Pods.xcconfig */,
+				06B30060195A49A20020C8B9 /* UIView+Copy (NeedsDrawRect) copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		2B9D8EEC195314EC00CDE614 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B9D8EEB195314EC00CDE614 /* UIView+Copy-Example.app */,
+				2B9D8EEB195314EC00CDE614 /* UIView+Copy (NeedsDrawRect).app */,
 				2B9D8F0F195314ED00CDE614 /* UIView+Copy-ExampleTests.xctest */,
-				0668B987195A44D2006D2097 /* UIView+Copy (NeedsDrawRect) copy.app */,
+				06B3005F195A49A10020C8B9 /* UIView+Copy (NeedsDrawRect) copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				2B9D8EF2195314EC00CDE614 /* UIKit.framework */,
 				2B9D8F10195314ED00CDE614 /* XCTest.framework */,
 				10288E4082A843BDB25D9292 /* libPods-UIView+Copy-Example.a */,
+				D14B6C04A2F54761BB1A702F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,15 +222,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0668B971195A44D2006D2097 /* UIView+Copy */ = {
+		06B30049195A49A10020C8B9 /* UIView+Copy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0668B984195A44D2006D2097 /* Build configuration list for PBXNativeTarget "UIView+Copy" */;
+			buildConfigurationList = 06B3005C195A49A10020C8B9 /* Build configuration list for PBXNativeTarget "UIView+Copy" */;
 			buildPhases = (
-				0668B972195A44D2006D2097 /* Check Pods Manifest.lock */,
-				0668B973195A44D2006D2097 /* Sources */,
-				0668B97A195A44D2006D2097 /* Frameworks */,
-				0668B97F195A44D2006D2097 /* Resources */,
-				0668B983195A44D2006D2097 /* Copy Pods Resources */,
+				06B3004A195A49A10020C8B9 /* Check Pods Manifest.lock */,
+				06B3004B195A49A10020C8B9 /* Sources */,
+				06B30052195A49A10020C8B9 /* Frameworks */,
+				06B30057195A49A10020C8B9 /* Resources */,
+				06B3005B195A49A10020C8B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +238,7 @@
 			);
 			name = "UIView+Copy";
 			productName = "UIView+Copy-Example";
-			productReference = 0668B987195A44D2006D2097 /* UIView+Copy (NeedsDrawRect) copy.app */;
+			productReference = 06B3005F195A49A10020C8B9 /* UIView+Copy (NeedsDrawRect) copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2B9D8EEA195314EC00CDE614 /* UIView+Copy (NeedsDrawRect) */ = {
@@ -253,7 +257,7 @@
 			);
 			name = "UIView+Copy (NeedsDrawRect)";
 			productName = "UIView+Copy-Example";
-			productReference = 2B9D8EEB195314EC00CDE614 /* UIView+Copy-Example.app */;
+			productReference = 2B9D8EEB195314EC00CDE614 /* UIView+Copy (NeedsDrawRect).app */;
 			productType = "com.apple.product-type.application";
 		};
 		2B9D8F0E195314ED00CDE614 /* UIView+Copy-ExampleTests */ = {
@@ -302,20 +306,20 @@
 			projectRoot = "";
 			targets = (
 				2B9D8EEA195314EC00CDE614 /* UIView+Copy (NeedsDrawRect) */,
-				0668B971195A44D2006D2097 /* UIView+Copy */,
+				06B30049195A49A10020C8B9 /* UIView+Copy */,
 				2B9D8F0E195314ED00CDE614 /* UIView+Copy-ExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0668B97F195A44D2006D2097 /* Resources */ = {
+		06B30057195A49A10020C8B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0668B980195A44D2006D2097 /* Images.xcassets in Resources */,
-				0668B981195A44D2006D2097 /* InfoPlist.strings in Resources */,
-				0668B982195A44D2006D2097 /* image.jpg in Resources */,
+				06B30058195A49A10020C8B9 /* Images.xcassets in Resources */,
+				06B30059195A49A10020C8B9 /* InfoPlist.strings in Resources */,
+				06B3005A195A49A10020C8B9 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +344,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0668B972195A44D2006D2097 /* Check Pods Manifest.lock */ = {
+		06B3004A195A49A10020C8B9 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,7 +359,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0668B983195A44D2006D2097 /* Copy Pods Resources */ = {
+		06B3005B195A49A10020C8B9 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-UIView+Copy-Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3749B26B7DF8419A86C0634C /* Copy Pods Resources */ = {
@@ -382,7 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-UIView+Copy-Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		78C4AA8D483742FEA6977A36 /* Check Pods Manifest.lock */ = {
@@ -403,16 +407,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0668B973195A44D2006D2097 /* Sources */ = {
+		06B3004B195A49A10020C8B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0668B974195A44D2006D2097 /* ViewController.m in Sources */,
-				0668B975195A44D2006D2097 /* CircleView.m in Sources */,
-				0668B976195A44D2006D2097 /* CustomView.m in Sources */,
-				0668B977195A44D2006D2097 /* AppDelegate.m in Sources */,
-				0668B978195A44D2006D2097 /* main.m in Sources */,
-				0668B979195A44D2006D2097 /* ProgressView.m in Sources */,
+				06B3004C195A49A10020C8B9 /* ViewController.m in Sources */,
+				06B3004D195A49A10020C8B9 /* CircleView.m in Sources */,
+				06B3004E195A49A10020C8B9 /* CustomView.m in Sources */,
+				06B3004F195A49A10020C8B9 /* AppDelegate.m in Sources */,
+				06B30050195A49A10020C8B9 /* main.m in Sources */,
+				06B30051195A49A10020C8B9 /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,30 +471,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0668B985195A44D2006D2097 /* Debug */ = {
+		06B3005D195A49A10020C8B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B9954D7D1C477EB9A5B259 /* Pods-UIView+Copy-Example.xcconfig */;
+			baseConfigurationReference = 0DE3700C822E48339FABB74B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/UIView+Copy-Example/UIView+Copy-Example-Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "UIView+Copy (NeedsDrawRect) copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "UIView+Copy (NeedsDrawRect) copy";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		0668B986195A44D2006D2097 /* Release */ = {
+		06B3005E195A49A10020C8B9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B9954D7D1C477EB9A5B259 /* Pods-UIView+Copy-Example.xcconfig */;
+			baseConfigurationReference = 0DE3700C822E48339FABB74B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/UIView+Copy-Example/UIView+Copy-Example-Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "UIView+Copy (NeedsDrawRect) copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "UIView+Copy (NeedsDrawRect) copy";
 				WRAPPER_EXTENSION = app;
@@ -571,12 +577,16 @@
 		};
 		2B9D8F21195314ED00CDE614 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B9954D7D1C477EB9A5B259 /* Pods-UIView+Copy-Example.xcconfig */;
+			baseConfigurationReference = 0DE3700C822E48339FABB74B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"NEEDS_DRAW_RECT=1",
+				);
 				INFOPLIST_FILE = "UIView+Copy-Example/UIView+Copy-Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -586,12 +596,16 @@
 		};
 		2B9D8F22195314ED00CDE614 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B9954D7D1C477EB9A5B259 /* Pods-UIView+Copy-Example.xcconfig */;
+			baseConfigurationReference = 0DE3700C822E48339FABB74B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"NEEDS_DRAW_RECT=1",
+				);
 				INFOPLIST_FILE = "UIView+Copy-Example/UIView+Copy-Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,11 +656,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0668B984195A44D2006D2097 /* Build configuration list for PBXNativeTarget "UIView+Copy" */ = {
+		06B3005C195A49A10020C8B9 /* Build configuration list for PBXNativeTarget "UIView+Copy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0668B985195A44D2006D2097 /* Debug */,
-				0668B986195A44D2006D2097 /* Release */,
+				06B3005D195A49A10020C8B9 /* Debug */,
+				06B3005E195A49A10020C8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

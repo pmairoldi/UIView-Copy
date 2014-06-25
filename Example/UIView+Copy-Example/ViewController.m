@@ -36,9 +36,9 @@
     /**** implementation ****/
     
 #ifdef NEEDS_DRAW_RECT
-    CustomView *copiedView = (CustomView *)[originalView pm_copy];
+    CustomView *copiedView = (CustomView *)[originalView pm_copyWithNeedsDrawRect:YES];
 #else
-    CustomView *copiedView = (CustomView *)[originalView pm_copyWithNeedsDrawRect:NO];
+    CustomView *copiedView = (CustomView *)[originalView pm_copy];
 #endif
     
     /**** implementation ****/
