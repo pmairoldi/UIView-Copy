@@ -16,6 +16,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 	//if you need mask layer property
     UIView *copiedViewWithDrawRect = (UIView *)[originalView pm_copyWithNeedsDrawRect:YES];
 
+    //copy using the snapshot api. iOS 7 only
+    UIView *copiedViewFromSnapshot = (UIView *)[originalView pm_copyToImage];
+
 ## Requirements
 	
 	iOS 6.0+ and ARC. 
