@@ -1,46 +1,28 @@
-//  UIView+UIView_Copy.m
+//
+//  UIView-Helpers.m
 //  Pods
 //
-//  Created by Pierre-Marc Airoldi on 2014-06-19.
+//  Created by Pierre-Marc Airoldi on 2014-07-07.
 //
 //
 
-#import "UIView+Copy.h"
+#import "UIViewHelpers.h"
 #import <objc/runtime.h>
 
 #define HIGHLIGHT_PROPERTY @"highlighted"
 #define LAYER_PROPERTY @"layer"
 #define LOGS 0
 
-@implementation UIView (Copy)
+@implementation UIViewHelpers
 
--(UIView *)pm_copy {
-    
-    UIView *copiedView = [[self class] copyView:self needsDrawRect:NO];
-    
-    [[self class] handleSubviewsFrom:self to:copiedView needsDrawRect:NO];
-    
-    return copiedView;
-}
-
--(UIView *)pm_copyWithNeedsDrawRect:(BOOL)needsDrawRect {
-    
-    UIView *copiedView = [[self class] copyView:self needsDrawRect:needsDrawRect];
-    
-    [[self class] handleSubviewsFrom:self to:copiedView needsDrawRect:needsDrawRect];
-    
-    return copiedView;
-}
-
-+(UIView *)copyView:(UIView *)view needsDrawRect:(BOOL)needsDrawRect {
++(UIView *)viewCopy:(UIView *)view needsDrawRect:(BOOL)needsDrawRect {
     
     [[self class] fixHighlighted:view];
     
-    UIView *copiedView = [self copyObject:view];
+    UIView *copiedView = [self objectCopy:view];
     
     if (!needsDrawRect) {
-        CALayer *copiedLayer = [self copyObject:view.layer];
-        [copiedView setValue:copiedLayer forKey:LAYER_PROPERTY];
+        [self layerCopyFromView:view toView:copiedView];
     }
     
     else {
@@ -48,16 +30,24 @@
     }
     
     [self setHighlighted:[self getHighlighted:view] forView:copiedView];
-    [self copyPropertiesFrom:view to:copiedView];
+    [self propertiesCopyFrom:view to:copiedView];
     
     return copiedView;
 }
 
-+(id)copyObject:(id)object {
++(void)layerCopyFromView:(UIView *)original toView:(UIView *)copied {
     
-    NSData *tempArchivedView = [NSKeyedArchiver archivedDataWithRootObject:object];
+    CALayer *copiedLayer = [self objectCopy:original.layer];
+    [copied setValue:copiedLayer forKey:LAYER_PROPERTY];
+}
+
++(id)objectCopy:(id)object {
     
-    return [NSKeyedUnarchiver unarchiveObjectWithData:tempArchivedView];
+    NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject:object];
+    
+    id copiedObject = [NSKeyedUnarchiver unarchiveObjectWithData:archivedData];
+
+    return copiedObject;
 }
 
 +(void)fixHighlighted:(UIView *)view {
@@ -99,7 +89,7 @@
     
     for (UIView *subview in original.subviews) {
         
-        UIView *copiedView = [self copyView:subview needsDrawRect:needsDrawRect];
+        UIView *copiedView = [self viewCopy:subview needsDrawRect:needsDrawRect];
         
         if (subview.subviews.count > 0) {
             [self handleSubviewsFrom:subview to:copiedView needsDrawRect:needsDrawRect];
@@ -107,12 +97,12 @@
     }
 }
 
-+(NSArray *)exludeLayerProperties {
++(NSArray *)layerPropertiesToExclude {
     
     return @[@"superlayer", @"sublayers"];
 }
 
-+(NSArray *)copyLayerProperties {
++(NSArray *)layerPropertiesToCopy {
     
     return @[@"contentsGravity", @"minificationFilter", @"magnificationFilter", @"filters", @"backgroundFilters", @"actions", @"name", @"style"];
 }
@@ -124,15 +114,15 @@
 
 +(void)setLayerPropertiesFrom:(CALayer *)original to:(CALayer *)copy isMask:(BOOL)isMask {
     
-    NSArray *exludeProperties = [self exludeLayerProperties];
-    NSArray *copyProperties = [self copyLayerProperties];
+    NSArray *exludeProperties = [self layerPropertiesToExclude];
+    NSArray *copyProperties = [self layerPropertiesToCopy];
     NSArray *layerProperties = [self layerProperties];
     
     unsigned int outCount, i;
     
     objc_property_t *properties = class_copyPropertyList([copy class], &outCount);
     
-    for (i = 0; i < outCount; i++) {
+    for (i = 0; i < outCount; ++i) {
     	
         objc_property_t property = properties[i];
         NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
@@ -143,7 +133,7 @@
         
         else if ([layerProperties containsObject:propertyName] && !isMask) {
             
-            id copiedValue = [self copyObject:[original valueForKey:propertyName]];
+            id copiedValue = [self objectCopy:[original valueForKey:propertyName]];
             
             if (copiedValue != nil) {
                 
@@ -171,7 +161,7 @@
     free(properties);
 }
 
-+(void)copyPropertiesFrom:(id)original to:(id)copy {
++(void)propertiesCopyFrom:(id)original to:(id)copy {
     
     unsigned int outCount, i;
     
@@ -193,7 +183,7 @@
             }
             
             else {
-                objectCopy = [self copyObject:objectProperty];
+                objectCopy = [self objectCopy:objectProperty];
             }
         }
         @catch (NSException *exception) {

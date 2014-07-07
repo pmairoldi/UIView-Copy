@@ -26,4 +26,18 @@
  */
 -(UIView *)pm_copyWithNeedsDrawRect:(BOOL)needsDrawRect;
 
+/**
+ *  Create a copy of a view with needsLayerProperties set to NO. See -(UIView *)pm_copyToImageWithLayerProperties:(BOOL)needsLayerProperties for more information.
+ *
+ *  @return UIView copy
+ */
+-(UIView *)pm_copyToImage NS_AVAILABLE_IOS(7_0);
+
+/**
+ *  Create a copy of a view and creates an image. Copies the layer properties for the superview if needsLayerProperties is set to YES (ie. borderColor, borderWidth...)
+ *
+ *  @return UIView copy
+ */
+-(UIView *)pm_copyToImageWithLayerProperties:(BOOL)needsLayerProperties  NS_AVAILABLE_IOS(7_0);
+
 @end

@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "UIView+Copy"
-  s.version          = "0.0.6"
+  s.version          = "0.0.7"
   s.summary          = "Adding a copy method to UIView."
   s.homepage         = "https://github.com/petester42/UIView-Copy"
   #s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -21,8 +21,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes'
   #s.resources = 'Assets/*.png'
-
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
 end

@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 
+@property CustomView *copiedView;
 
 @end
 
@@ -35,20 +36,28 @@
     
     /**** implementation ****/
     
+    double startTime = CACurrentMediaTime();
+    
 #ifdef NEEDS_DRAW_RECT
-    CustomView *copiedView = (CustomView *)[originalView pm_copyWithNeedsDrawRect:YES];
+    _copiedView = (CustomView *)[originalView pm_copyWithNeedsDrawRect:YES]; //YES:0.006631 NO:0.128084
+#elif IMAGE
+    _copiedView = (CustomView *)[originalView pm_copyToImageWithLayerProperties:YES]; //YES:0.087293 NO:0.033197
 #else
-    CustomView *copiedView = (CustomView *)[originalView pm_copy];
+    _copiedView = (CustomView *)[originalView pm_copy]; //0.128084
 #endif
+    
+    _copiedView.backgroundColor = [UIColor redColor];
+    
+    NSLog(@"%f", CACurrentMediaTime() - startTime);
     
     /**** implementation ****/
 
-    [self.view addSubview:copiedView];
+    [self.view addSubview:_copiedView];
     
-    copiedView.frame = CGRectMake(CGRectGetMinX(bottom), CGRectGetMinY(bottom), CGRectGetWidth(copiedView.frame), CGRectGetHeight(copiedView.frame));
+    _copiedView.frame = CGRectMake(CGRectGetMinX(bottom), CGRectGetMinY(bottom), CGRectGetWidth(_copiedView.frame), CGRectGetHeight(_copiedView.frame));
     
     [self addText:@"Original" toView:originalView];
-    [self addText:@"Copy" toView:copiedView];
+    [self addText:@"Copy" toView:_copiedView];
     
 }
 
@@ -87,6 +96,22 @@
     bottom->origin.y += 5;
     bottom->size.width -= 10;
     bottom->size.height -= 10;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1ull * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        CABasicAnimation *color = [CABasicAnimation animationWithKeyPath:@"borderColor"];
+        color.fromValue = (id)[UIColor blackColor].CGColor;
+        color.toValue   = (id)[UIColor redColor].CGColor;
+        color.fillMode = kCAFillModeForwards;
+        color.removedOnCompletion = NO;
+        color.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        
+        [_copiedView.layer addAnimation:color forKey:@"color"];
+    });
 }
 
 @end

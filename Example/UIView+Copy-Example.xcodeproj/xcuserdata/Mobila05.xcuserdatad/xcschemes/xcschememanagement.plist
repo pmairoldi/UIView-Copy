@@ -4,14 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UIView+Copy-Example.xcscheme</key>
+		<key>UIView+Copy (Image).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
+		</dict>
+		<key>UIView+Copy (NeedsDrawRect).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>UIView+Copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06B30049195A49A10020C8B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B22E70D196AD807000D731C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2B9D8EEA195314EC00CDE614</key>
 		<dict>
 			<key>primary</key>

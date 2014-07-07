@@ -24,6 +24,19 @@
 		06F9BC1A195A01A700CF703B /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC19195A01A700CF703B /* CircleView.m */; };
 		06F9BC1D195A01B200CF703B /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC1C195A01B200CF703B /* ProgressView.m */; };
 		06F9BC1F195A090D00CF703B /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F9BC1E195A090D00CF703B /* image.jpg */; };
+		2B22E710196AD807000D731C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8F07195314ED00CDE614 /* ViewController.m */; };
+		2B22E711196AD807000D731C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC19195A01A700CF703B /* CircleView.m */; };
+		2B22E712196AD807000D731C /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC16195A019C00CF703B /* CustomView.m */; };
+		2B22E713196AD807000D731C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8EFE195314EC00CDE614 /* AppDelegate.m */; };
+		2B22E714196AD807000D731C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8EFA195314EC00CDE614 /* main.m */; };
+		2B22E715196AD807000D731C /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F9BC1C195A01B200CF703B /* ProgressView.m */; };
+		2B22E717196AD807000D731C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF0195314EC00CDE614 /* CoreGraphics.framework */; };
+		2B22E718196AD807000D731C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF2195314EC00CDE614 /* UIKit.framework */; };
+		2B22E719196AD807000D731C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EEE195314EC00CDE614 /* Foundation.framework */; };
+		2B22E71A196AD807000D731C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D14B6C04A2F54761BB1A702F /* libPods.a */; };
+		2B22E71C196AD807000D731C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8F09195314ED00CDE614 /* Images.xcassets */; };
+		2B22E71D196AD807000D731C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D8EF7195314EC00CDE614 /* InfoPlist.strings */; };
+		2B22E71E196AD807000D731C /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F9BC1E195A090D00CF703B /* image.jpg */; };
 		2B9D8EEF195314EC00CDE614 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EEE195314EC00CDE614 /* Foundation.framework */; };
 		2B9D8EF1195314EC00CDE614 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF0195314EC00CDE614 /* CoreGraphics.framework */; };
 		2B9D8EF3195314EC00CDE614 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9D8EF2195314EC00CDE614 /* UIKit.framework */; };
@@ -61,6 +74,8 @@
 		06F9BC1E195A090D00CF703B /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		0DE3700C822E48339FABB74B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		10288E4082A843BDB25D9292 /* libPods-UIView+Copy-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIView+Copy-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B22E723196AD807000D731C /* UIView+Copy copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B22E724196AD807000D731C /* UIView+Copy copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UIView+Copy copy-Info.plist"; path = "/Users/pierremarcairoldi/Desktop/UIView-Copy/Example/UIView+Copy copy-Info.plist"; sourceTree = "<absolute>"; };
 		2B9D8EEB195314EC00CDE614 /* UIView+Copy (NeedsDrawRect).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView+Copy (NeedsDrawRect).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9D8EEE195314EC00CDE614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B9D8EF0195314EC00CDE614 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +106,17 @@
 				06B30054195A49A10020C8B9 /* UIKit.framework in Frameworks */,
 				06B30055195A49A10020C8B9 /* Foundation.framework in Frameworks */,
 				06B30056195A49A10020C8B9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B22E716196AD807000D731C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B22E717196AD807000D731C /* CoreGraphics.framework in Frameworks */,
+				2B22E718196AD807000D731C /* UIKit.framework in Frameworks */,
+				2B22E719196AD807000D731C /* Foundation.framework in Frameworks */,
+				2B22E71A196AD807000D731C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +173,7 @@
 				2B9D8EED195314EC00CDE614 /* Frameworks */,
 				2B9D8EEC195314EC00CDE614 /* Products */,
 				0DE3700C822E48339FABB74B /* Pods.xcconfig */,
+				2B22E724196AD807000D731C /* UIView+Copy copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +183,7 @@
 				2B9D8EEB195314EC00CDE614 /* UIView+Copy (NeedsDrawRect).app */,
 				2B9D8F0F195314ED00CDE614 /* UIView+Copy-ExampleTests.xctest */,
 				06B3005F195A49A10020C8B9 /* UIView+Copy (NeedsDrawRect) copy.app */,
+				2B22E723196AD807000D731C /* UIView+Copy copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,6 +267,25 @@
 			productReference = 06B3005F195A49A10020C8B9 /* UIView+Copy (NeedsDrawRect) copy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2B22E70D196AD807000D731C /* UIView+Copy (Image) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B22E720196AD807000D731C /* Build configuration list for PBXNativeTarget "UIView+Copy (Image)" */;
+			buildPhases = (
+				2B22E70E196AD807000D731C /* Check Pods Manifest.lock */,
+				2B22E70F196AD807000D731C /* Sources */,
+				2B22E716196AD807000D731C /* Frameworks */,
+				2B22E71B196AD807000D731C /* Resources */,
+				2B22E71F196AD807000D731C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIView+Copy (Image)";
+			productName = "UIView+Copy-Example";
+			productReference = 2B22E723196AD807000D731C /* UIView+Copy copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2B9D8EEA195314EC00CDE614 /* UIView+Copy (NeedsDrawRect) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B9D8F20195314ED00CDE614 /* Build configuration list for PBXNativeTarget "UIView+Copy (NeedsDrawRect)" */;
@@ -304,6 +351,7 @@
 			projectRoot = "";
 			targets = (
 				2B9D8EEA195314EC00CDE614 /* UIView+Copy (NeedsDrawRect) */,
+				2B22E70D196AD807000D731C /* UIView+Copy (Image) */,
 				06B30049195A49A10020C8B9 /* UIView+Copy */,
 				2B9D8F0E195314ED00CDE614 /* UIView+Copy-ExampleTests */,
 			);
@@ -318,6 +366,16 @@
 				06B30058195A49A10020C8B9 /* Images.xcassets in Resources */,
 				06B30059195A49A10020C8B9 /* InfoPlist.strings in Resources */,
 				06B3005A195A49A10020C8B9 /* image.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B22E71B196AD807000D731C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B22E71C196AD807000D731C /* Images.xcassets in Resources */,
+				2B22E71D196AD807000D731C /* InfoPlist.strings in Resources */,
+				2B22E71E196AD807000D731C /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +416,36 @@
 			showEnvVarsInLog = 0;
 		};
 		06B3005B195A49A10020C8B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B22E70E196AD807000D731C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2B22E71F196AD807000D731C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,6 +503,19 @@
 				06B3004F195A49A10020C8B9 /* AppDelegate.m in Sources */,
 				06B30050195A49A10020C8B9 /* main.m in Sources */,
 				06B30051195A49A10020C8B9 /* ProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B22E70F196AD807000D731C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B22E710196AD807000D731C /* ViewController.m in Sources */,
+				2B22E711196AD807000D731C /* CircleView.m in Sources */,
+				2B22E712196AD807000D731C /* CustomView.m in Sources */,
+				2B22E713196AD807000D731C /* AppDelegate.m in Sources */,
+				2B22E714196AD807000D731C /* main.m in Sources */,
+				2B22E715196AD807000D731C /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +602,44 @@
 			};
 			name = Release;
 		};
+		2B22E721196AD807000D731C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE3700C822E48339FABB74B /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"IMAGE=1",
+				);
+				INFOPLIST_FILE = "UIView+Copy copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "UIView+Copy copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2B22E722196AD807000D731C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE3700C822E48339FABB74B /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIView+Copy-Example/UIView+Copy-Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"IMAGE=1",
+				);
+				INFOPLIST_FILE = "UIView+Copy copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "UIView+Copy copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		2B9D8F1E195314ED00CDE614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,6 +666,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -560,6 +700,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -659,6 +800,15 @@
 			buildConfigurations = (
 				06B3005D195A49A10020C8B9 /* Debug */,
 				06B3005E195A49A10020C8B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B22E720196AD807000D731C /* Build configuration list for PBXNativeTarget "UIView+Copy (Image)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B22E721196AD807000D731C /* Debug */,
+				2B22E722196AD807000D731C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
