@@ -1,5 +1,5 @@
 PODS:
-  - UIView+Copy (0.0.5)
+  - UIView+Copy (0.0.8)
 
 DEPENDENCIES:
   - UIView+Copy (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  UIView+Copy: 819c116167a7a25219913ebfb29cf802b48e0d14
+  UIView+Copy: 3fc0c72213cbc76d9528874b0ad3d43f09d4f24b
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4
