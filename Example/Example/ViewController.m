@@ -85,6 +85,11 @@
     CGRect frame = self.view.frame;
     frame.origin = CGPointZero;
     
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+        frame.origin.y += 20;
+        frame.size.height -= 20;
+    }
+    
     CGRectDivide(frame, top, bottom, CGRectGetHeight(frame)/2, CGRectMinYEdge);
     
     top->origin.x += 5;

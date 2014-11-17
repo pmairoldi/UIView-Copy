@@ -8,7 +8,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-	#import <UIView+Copy/UIView+Copy.h>
+    #import <UIView+Copy/UIView+PMCopy.h>
 
 	//If you need drawRect: drawing
 	UIView *copiedView = [originalView pm_copy];

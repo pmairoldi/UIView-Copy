@@ -75,9 +75,7 @@
 		068D26E81A197A670051A462 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		068D26E91A197A670051A462 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		068D27021A197B4C0051A462 /* Example copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		068D27031A197B4C0051A462 /* Example copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Example copy-Info.plist"; path = "/Users/pierremarcairoldi/Developer/cocoa/UIView-Copy/Example/Example copy-Info.plist"; sourceTree = "<absolute>"; };
 		068D27181A197B760051A462 /* Example (needs drawRect) copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example (needs drawRect) copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		068D27191A197B760051A462 /* Example (needs drawRect) copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Example (needs drawRect) copy-Info.plist"; path = "/Users/pierremarcairoldi/Developer/cocoa/UIView-Copy/Example/Example (needs drawRect) copy-Info.plist"; sourceTree = "<absolute>"; };
 		1AFC27AA4B70BD72E4D27820 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		448A9057682ABC6B724F87B8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F324A0D214A8C26A612F65 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,8 +124,6 @@
 				068D26BA1A1979CA0051A462 /* Products */,
 				73425F58EF8936886A2F6386 /* Pods */,
 				9092DE62D2228F52CA634553 /* Frameworks */,
-				068D27031A197B4C0051A462 /* Example copy-Info.plist */,
-				068D27191A197B760051A462 /* Example (needs drawRect) copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -689,7 +685,7 @@
 					"$(inherited)",
 					"NEEDS_DRAW_RECT=1",
 				);
-				INFOPLIST_FILE = "Example copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Example copy";
 			};
@@ -704,7 +700,7 @@
 					"$(inherited)",
 					"NEEDS_DRAW_RECT=1",
 				);
-				INFOPLIST_FILE = "Example copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Example copy";
 			};
@@ -719,7 +715,7 @@
 					"$(inherited)",
 					"IMAGE=1",
 				);
-				INFOPLIST_FILE = "Example (needs drawRect) copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Example (needs drawRect) copy";
 			};
@@ -734,7 +730,7 @@
 					"$(inherited)",
 					"IMAGE=1",
 				);
-				INFOPLIST_FILE = "Example (needs drawRect) copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Example (needs drawRect) copy";
 			};

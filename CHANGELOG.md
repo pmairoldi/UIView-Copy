@@ -15,3 +15,7 @@ Fixed highlight property crash
 ## 0.0.7
 
 Added copy view from snapshot api. Moved methods to other file to prevent method clash in UIView. Renamed things to fix analyzer warnings.
+
+## 0.0.8
+
+Added class prefix to pervent category clashes
